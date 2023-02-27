@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-08T10:00:28.595Z</updated>
+  <updated>2023-02-27T06:55:34.049Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库网摘</title>
+    <link href="http://example.com/2023/02/27/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BD%91%E6%91%98/"/>
+    <id>http://example.com/2023/02/27/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BD%91%E6%91%98/</id>
+    <published>2023-02-27T06:54:06.192Z</published>
+    <updated>2023-02-27T06:55:34.049Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a><a href="https://blog.csdn.net/weixin_52938172/article/details/125739105">索引</a></h3><blockquote><p>为什么要有索引？为了提高查询的效率。<br>什么条件下，我们会考虑给字段添加索引呢？<br>条件1：数据量庞大（到底有多么庞大算庞大，这个需要测试，因为每一个硬件环境不同）<br>条件2：该字段经常出现在where的后面，以条件的形式存在，也就是说这个字段总是被扫描。<br>    条件3：该字段很少的DML(insert delete update)操作。（因为DML之后，索引需要重新排序。）<br>建议不要随意添加索引，因为索引也是需要维护的，太多的话反而会降低系统的性能。<br>建议通过主键查询，建议通过unique约束的字段进行查询，效率是比较高的。</p></blockquote><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;索引&quot;&gt;&lt;a href=&quot;#索引&quot; class=&quot;headerlink&quot; title=&quot;索引&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_52938172/article/details/125739105&quot;&gt;索引&lt;/a&gt;</summary>
+      
+    
+    
+    
+    <category term="数据库" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前端技术网摘</title>
+    <link href="http://example.com/2023/02/15/vue%E7%BD%91%E6%91%98/"/>
+    <id>http://example.com/2023/02/15/vue%E7%BD%91%E6%91%98/</id>
+    <published>2023-02-15T09:00:57.924Z</published>
+    <updated>2023-02-15T09:01:27.385Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="VUE——基础"><a href="#VUE——基础" class="headerlink" title="VUE——基础"></a><a href="">VUE——基础</a></h3><blockquote><p>Vue模板语法有2大类：<br>1.插值语法：<br>功能：用于解析标签体内容。<br>写法：(xxx)》,xxx是js表达式，且可以直接读取到ata中的所有属性。<br>2,指令语法：<br>功能：<br>用于解析标签（包括：标签属性、标签体内容、绑定事件，··，）。<br>举例：v-bind:href=”xxx”或简写为：href=”xxx”,xxx同样要写js表达式，<br>且可以直接读取到data中的所有属性。<br>备注：Vue中有很多的指令，且形式都是：v-????,此处我们只是拿v-bind举个例子。</p></blockquote><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;VUE——基础&quot;&gt;&lt;a href=&quot;#VUE——基础&quot; class=&quot;headerlink&quot; title=&quot;VUE——基础&quot;&gt;&lt;/a&gt;&lt;a href=&quot;&quot;&gt;VUE——基础&lt;/a&gt;&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Vue模板语法有2大类：&lt;br&gt;1.插值语法</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>debug记录</title>
@@ -43,9 +88,9 @@
     <link href="http://example.com/2023/02/08/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E7%BD%91%E6%91%98/"/>
     <id>http://example.com/2023/02/08/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E7%BD%91%E6%91%98/</id>
     <published>2023-02-08T09:20:24.984Z</published>
-    <updated>2023-02-08T10:00:37.886Z</updated>
+    <updated>2023-02-15T09:01:28.634Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="VUE——nextTick"><a href="#VUE——nextTick" class="headerlink" title="VUE——nextTick"></a><a href="https://segmentfault.com/q/1010000018918929">VUE——nextTick</a></h3><blockquote><p>你可能对nextTick有什么误解，nextTick是下一个eventLoop里面的一个待执行的钩子函数。<br>vue数据驱动视图更新的逻辑是：data变化 –&gt; nextTick触发 –&gt; 更新vdom –&gt; 新旧vdom对比 –&gt; 生成dom更新视图。<br>js单线程的原因，nextTick里面写的代码会在生成dom这步后面执行，所以一般在这里拿最新的dom，这也是nextTick的应用场景，它的其它场景没见过。<br>然后：vue的data赋值是一个同步的过程，nextTick函数在data的值变化后的某个时间触发。同步过程的前后两个点，原则上是不需要知道的，因为没有意义。<br>最后：至于你要看数据的变化前后，可以watch selected，新旧值都会给你<br>补充：再次审题了一下，你把点击事件绑定在option上，在选择的时候，肯定是先触发事件，再selected赋值，你再去看看 这个select组件的用法，你用错了。-_-</p></blockquote><hr><h3 id="Js自带方法-eval-将字符串当作代码输出"><a href="#Js自带方法-eval-将字符串当作代码输出" class="headerlink" title="Js自带方法 eval() 将字符串当作代码输出"></a><a href="https://www.cnblogs.com/fqh123/p/11302663.html">Js自带方法 eval() 将字符串当作代码输出</a></h3><blockquote><p>eval()可以动态解析和执行字符串，它直接把字符串当做Javascript代码执行，eval函数接收一个参数str，如果str不是字符串，则直接返回str，否则执行str语句。如果str语句执行结果是一个值，则返回此值，否则返回undefined。</p></blockquote><hr><h3 id="JS逻辑判断"><a href="#JS逻辑判断" class="headerlink" title="JS逻辑判断"></a><a href="https://www.jb51.net/article/88781.htm">JS逻辑判断</a></h3><blockquote><p>1、只要“||”前面为false,不管“||”后面是true还是false，都返回“||”后面的值。<br>2、只要“||”前面为true,不管“||”后面是true还是false，都返回“||”前面的值。</p></blockquote><hr><h3 id="pointer-events"><a href="#pointer-events" class="headerlink" title="pointer-events"></a><a href="https://blog.csdn.net/qq_35432904/article/details/103896123">pointer-events</a></h3><blockquote><p>1、pointer-events 更像是JavaScript，它能够：<br>阻止用户的点击动作产生任何效果<br>阻止缺省鼠标指针的显示<br>阻止CSS里的 hover 和 active 状态的变化触发事件<br>阻止JavaScript点击动作触发的事件<br>通过其他方式绑定的事件还是会触发的，比如键盘事件等。</p></blockquote><hr>]]></content>
+    <content type="html"><![CDATA[<h3 id="VUE——nextTick"><a href="#VUE——nextTick" class="headerlink" title="VUE——nextTick"></a><a href="https://segmentfault.com/q/1010000018918929">VUE——nextTick</a></h3><blockquote><p>你可能对nextTick有什么误解，nextTick是下一个eventLoop里面的一个待执行的钩子函数。<br>vue数据驱动视图更新的逻辑是：data变化 –&gt; nextTick触发 –&gt; 更新vdom –&gt; 新旧vdom对比 –&gt; 生成dom更新视图。<br>js单线程的原因，nextTick里面写的代码会在生成dom这步后面执行，所以一般在这里拿最新的dom，这也是nextTick的应用场景，它的其它场景没见过。<br>然后：vue的data赋值是一个同步的过程，nextTick函数在data的值变化后的某个时间触发。同步过程的前后两个点，原则上是不需要知道的，因为没有意义。<br>最后：至于你要看数据的变化前后，可以watch selected，新旧值都会给你<br>补充：再次审题了一下，你把点击事件绑定在option上，在选择的时候，肯定是先触发事件，再selected赋值，你再去看看 这个select组件的用法，你用错了。-_-</p></blockquote><hr><h3 id="Js自带方法-eval-将字符串当作代码输出"><a href="#Js自带方法-eval-将字符串当作代码输出" class="headerlink" title="Js自带方法 eval() 将字符串当作代码输出"></a><a href="https://www.cnblogs.com/fqh123/p/11302663.html">Js自带方法 eval() 将字符串当作代码输出</a></h3><blockquote><p>eval()可以动态解析和执行字符串，它直接把字符串当做Javascript代码执行，eval函数接收一个参数str，如果str不是字符串，则直接返回str，否则执行str语句。如果str语句执行结果是一个值，则返回此值，否则返回undefined。</p></blockquote><hr><h3 id="JS逻辑判断"><a href="#JS逻辑判断" class="headerlink" title="JS逻辑判断"></a><a href="https://www.jb51.net/article/88781.htm">JS逻辑判断</a></h3><blockquote><p>1、只要“||”前面为false,不管“||”后面是true还是false，都返回“||”后面的值。<br>2、只要“||”前面为true,不管“||”后面是true还是false，都返回“||”前面的值。</p></blockquote><hr><h3 id="pointer-events"><a href="#pointer-events" class="headerlink" title="pointer-events"></a><a href="https://blog.csdn.net/qq_35432904/article/details/103896123">pointer-events</a></h3><blockquote><p>1、pointer-events 更像是JavaScript，它能够：<br>阻止用户的点击动作产生任何效果<br>阻止缺省鼠标指针的显示<br>阻止CSS里的 hover 和 active 状态的变化触发事件<br>阻止JavaScript点击动作触发的事件<br>通过其他方式绑定的事件还是会触发的，比如键盘事件等。</p></blockquote><hr><h3 id="强制刷新"><a href="#强制刷新" class="headerlink" title="强制刷新"></a><a href="https://jingyan.baidu.com/article/afd8f4de4fb6a634e386e94c.html">强制刷新</a></h3><blockquote><p>我们都知道刷新是F5，却很少听到强制刷新，刷新只是刷新本地的缓冲记录，不产生流量。而强制刷新则是从对应的网站上重新下载数据，产生流量。对于一些特殊情况，使用强制刷新，效果非常好。强制刷新的按钮是Ctrl+F5。</p></blockquote><hr>]]></content>
     
     
       
